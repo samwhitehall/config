@@ -4,6 +4,8 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>ApplePressAndHoldEnabled</key>
@@ -57218,7 +57220,7 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{545, 876}</string>
+		<string>{128, 983}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>66A9CC52-9ADE-4F31-83D0-45D81993E8E0</string>
