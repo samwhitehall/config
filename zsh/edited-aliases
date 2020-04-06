@@ -1,0 +1,2 @@
+alias ktd="PYENV_VERSION=kube ktd"
+alias flake8="PYENV_VERSION=lint flake8"

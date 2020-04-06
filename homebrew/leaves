@@ -4,6 +4,7 @@ git-lfs
 neovim
 node
 pyenv
+pyenv-virtualenv
 sqlite
 tig
 xz

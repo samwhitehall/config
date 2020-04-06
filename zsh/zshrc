@@ -17,9 +17,8 @@ source $ZSH/oh-my-zsh.sh
 
 
 # Enable pyenv shims & autocompletion
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 
 # Load nvm (only when called, to save boot time)
@@ -46,6 +45,7 @@ alias mdkir=mkdir
 
 # EDITED
 source ~/apps/docs/scripts/termtools/init.sh
+source ~/config/zsh/edited-aliases
 
 
 # Load zsh-autosuggestions plugin
