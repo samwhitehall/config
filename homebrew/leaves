@@ -5,6 +5,7 @@ neovim
 node
 pyenv
 sqlite
+tig
 xz
 zlib
 zsh
