@@ -56363,7 +56363,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>440 451 799 448 0 0 1680 1050 </string>
+	<string>611 350 799 448 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>51 75 850 952 0 0 1680 1050 </string>
 	<key>New Bookmarks</key>
@@ -56529,7 +56529,7 @@
 				<real>0.13546057045459747</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/samw/Downloads/subtle_dots/subtle_dots_@2X copy.png</string>
+			<string>/Users/samw/config/iterm/background.png</string>
 			<key>Background Image Mode</key>
 			<integer>1</integer>
 			<key>Badge Color</key>
@@ -56546,7 +56546,7 @@
 				<real>1</real>
 			</dict>
 			<key>Blend</key>
-			<real>0.098356958762886637</real>
+			<real>0.095449420103092777</real>
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
