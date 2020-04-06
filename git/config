@@ -23,3 +23,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[color "status"]
+	changed = blue normal bold
+	header = white normal dim
