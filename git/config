@@ -10,6 +10,7 @@
 [alias]
 	co = checkout
 	br = branch
+	st = status
 [github]
 	user = samwhitehall
 	name = Sam Whitehall
