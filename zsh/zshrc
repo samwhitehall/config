@@ -1,0 +1,52 @@
+# Setup & configure oh-my-zsh
+export ZSH="/Users/samw/.oh-my-zsh"
+
+# custom theme
+ZSH_THEME="typewritten-sw"
+
+# don't bother updating every two weeks
+export UPDATE_ZSH_DAYS=60
+
+ZSH_CUSTOM="$HOME/config/zsh/custom"
+DISABLE_AUTO_TITLE="true"
+COMPLETION_WAITING_DOTS="true"
+
+plugins=(emoji git vi-mode vi-mode-cursor)
+
+source $ZSH/oh-my-zsh.sh
+
+
+# Enable pyenv shims & autocompletion
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+
+# Load nvm (only when called, to save boot time)
+function nvm() {
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+  echo "nvm has been initialised! try again now!"
+}
+
+
+# Aliases
+alias dcr=docker-compose run --rm
+alias dcu=docker-compose up
+
+alias vi=vim
+alias vim=nvim
+
+alias mdkir=mkdir
+
+
+# EDITED
+source ~/apps/docs/scripts/termtools/init.sh
+
+
+# Load zsh-autosuggestions plugin
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Load fzf (fuzzy-finder)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

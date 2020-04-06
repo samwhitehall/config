@@ -1,0 +1,24 @@
+[user]
+	name = Sam Whitehall
+	email = sam.w@edited.com
+[color]
+	ui = true
+[core]
+	editor = vi
+	pager = less -F -X
+[alias]
+	co = checkout
+	br = branch
+[github]
+	user = samwhitehall
+	name = Sam Whitehall
+	email = me@samwhitehall.com
+[push]
+	default = current
+[merge]
+	conflictstyle = diff3
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

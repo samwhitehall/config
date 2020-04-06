@@ -1,0 +1,94 @@
+call plug#begin('~/.vim/plugged')
+
+" vim-plug plugins
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'albfan/nerdtree-git-plugin'
+
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
+" syntax handling
+syntax on
+syntax enable
+filetype plugin indent on
+
+" colour
+highlight LineNr ctermfg=DarkGray
+highlight ColorColumn ctermbg=DarkGray
+
+" line numbers
+set number
+set numberwidth=3
+
+" wildmenu (nicer tab completion in :)
+set ignorecase
+set wildmenu
+set wildmode=longest:full,full
+
+" re-map leader
+let mapleader = ","
+
+" terminal
+set visualbell
+set ttyfast
+set title
+
+" os clipboard access
+nmap <leader>y "+y
+vmap <leader>y "+y
+nmap <leader>p "+p
+
+" buffer searching
+set hlsearch
+nnoremap <leader><space> :noh<cr>
+set smartcase
+
+" wrapping
+set wrap
+set textwidth=79
+set colorcolumn=80
+set formatoptions=qrn1
+
+" re-map arrow keys
+nmap <left> <<
+nmap <right> >>
+vmap <left> <gv
+vmap <right> >gv
+
+nmap <up> [e
+nmap <down> ]e
+vmap <up> [egv
+vmap <down> ]egv
+
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+
+" tabbing
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+" window splitting
+nnoremap <leader>hs <C-w>v<C-w>l
+nnoremap <leader>vs <C-w>s<C-w>l
+
+set splitbelow
+set splitright
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" nerdtree
+let NERDTreeShowHidden = 1
+nnoremap <leader>t :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
