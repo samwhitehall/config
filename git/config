@@ -6,6 +6,7 @@
 [core]
 	editor = vi
 	pager = less -F -X
+    excludesfile = ~/config/git/ignore
 [alias]
 	co = checkout
 	br = branch
