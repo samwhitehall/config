@@ -1,0 +1,13 @@
+elasticsearch
+ipython
+kombu
+nose
+numpy
+pandas
+pydash
+python-dateutil
+redis
+requests
+riak
+scipy
+selenium

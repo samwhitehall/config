@@ -42,6 +42,8 @@ alias vim=nvim
 
 alias mdkir=mkdir
 
+alias sandbox="cd ~/sandbox && pyenv shell sandbox && ipython"
+
 
 # EDITED
 source ~/apps/docs/scripts/termtools/init.sh

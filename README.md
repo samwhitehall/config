@@ -20,3 +20,8 @@ This should be cloned into `~/config`.
 
 ## iterm
 * Preferences > General > Preferences > Load preferences from a custom folder
+
+## sandbox
+* create dir: `mkdir ~/sandbox`
+* create env: `pyenv virtualenv 3.8.2 sandbox`
+* install reqs: `PYENV_VERSION="sandbox" pip install -r config/sandbox/requirements.pip`
