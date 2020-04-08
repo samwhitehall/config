@@ -6,6 +6,7 @@ node
 pyenv
 pyenv-virtualenv
 sqlite
+the_silver_searcher
 tig
 xz
 zlib
