@@ -8,6 +8,7 @@ pyenv-virtualenv
 sqlite
 the_silver_searcher
 tig
+wget
 xz
 zlib
 zsh
