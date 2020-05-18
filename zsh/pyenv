@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# This script will automatically enable a pyenv virtualenv when you cd into
+# a directory, without having to set .python-version.
+
+PYENV_DEFAULT="3.7.0"
+PYENV_MANAGER_CONFIG="$HOME/.pyenv_list"
+
+newpyenv() {
+    FULL_DIRECTORY=$(pwd);
+    PROJECT_NAME=$(pwd | awk -F/ '{print $NF}');
+
+    SEARCH=$(cat $PYENV_MANAGER_CONFIG | grep $FULL_DIRECTORY);
+    if [ -n "$SEARCH" ]; then
+        echo "pyenv $PROJECT_NAME already exists."
+    else
+        echo "$FULL_DIRECTORY:$PROJECT_NAME" >> $PYENV_MANAGER_CONFIG
+    fi
+}
+
+getpyenv() {
+    MATCH=$(cat $PYENV_MANAGER_CONFIG | grep "$(pwd):");
+    
+    if [ -n "$MATCH" ]; then
+        PROJECT_NAME=$(echo $MATCH | cut -d':' -f 2);
+        echo $PROJECT_NAME;
+    else
+        echo "";
+    fi
+}
+
+setpyenv() {
+    PROJECT_NAME=$(getpyenv);
+    if [ -n "$PROJECT_NAME" ]; then
+        pyenv shell $PROJECT_NAME;
+    else
+        pyenv shell $(cat $(pyenv version-file));
+    fi
+}
+
+function chpwd {
+    setpyenv;
+}
