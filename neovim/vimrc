@@ -10,6 +10,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'albfan/nerdtree-git-plugin'
 
+Plug 'tpope/vim-eunuch'
+
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
