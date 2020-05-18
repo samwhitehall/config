@@ -107,6 +107,9 @@ let NERDTreeShowHidden = 1
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
+" gitgutter
+autocmd BufWritePost * GitGutter  " update on save
+
 " lightline
 let g:lightline = {
     \ 'colorscheme': 'wombat', 
