@@ -20,6 +20,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'iberianpig/tig-explorer.vim'
 Plug 'rbgrouleff/bclose.vim'   " dependency of tig-explorer
 
+Plug 'neomake/neomake'
+
 call plug#end()
 
 " syntax handling
@@ -123,3 +125,11 @@ let g:fzf_buffers_jump = 1
 " tig-explorer
 nnoremap <Leader>G :TigOpenCurrentFile<CR>
 nnoremap <Leader>g :TigOpenProjectRootDir<CR>
+
+" neomake
+call neomake#configure#automake('nrwi', 500)
+
+let g:neomake_python_enabled_makers = ['flake8']
+
+let g:neomake_python_flake8_exe = 'env'
+let g:neomake_python_flake8_args = ['PYENV_VERSION=lint', 'flake8']
