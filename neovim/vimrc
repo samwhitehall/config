@@ -17,6 +17,8 @@ Plug 'tpope/vim-eunuch'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'iberianpig/tig-explorer.vim'
+Plug 'rbgrouleff/bclose.vim'   " dependency of tig-explorer
 
 call plug#end()
 
@@ -117,3 +119,7 @@ nnoremap <silent> <leader>. :Files<CR>
 nnoremap <silent> <leader><leader> :Ag<CR>
 
 let g:fzf_buffers_jump = 1
+
+" tig-explorer
+nnoremap <Leader>G :TigOpenCurrentFile<CR>
+nnoremap <Leader>g :TigOpenProjectRootDir<CR>
