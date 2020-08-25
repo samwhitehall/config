@@ -58,5 +58,6 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
 
-# Add custom scripts for mapping custom pyenvs to directories
-source ~/config/zsh/pyenv
+# Add custom script for mapping custom pyenvs to directories
+source ~/config/zsh/pyenv_manager
+setpyenv
