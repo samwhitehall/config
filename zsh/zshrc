@@ -44,6 +44,9 @@ alias mdkir=mkdir
 
 alias sandbox="cd ~/sandbox && pyenv shell sandbox && ipython"
 
+alias sz="source ~/.zshrc"
+alias dt="python -c 'from datetime import datetime; print(datetime.utcnow().isoformat())'"
+
 
 # EDITED
 source ~/apps/docs/scripts/termtools/init.sh
