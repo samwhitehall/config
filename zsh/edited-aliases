@@ -1,2 +1,3 @@
 alias ktd="PYENV_VERSION=kube ktd"
 alias flake8="PYENV_VERSION=lint flake8"
+export VAULT_ADDR=http://vault.edtd.net:8200
