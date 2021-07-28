@@ -64,3 +64,8 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 # Add custom script for mapping custom pyenvs to directories
 source ~/config/zsh/pyenv_manager
 setpyenv
+
+# Global search and replace alias
+function agr() {
+    ag -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
+}
