@@ -9,8 +9,7 @@ This should be cloned into `~/config`.
 ## zsh
 * install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 * symlink config: `ln -s ~/config/zsh/zshrc .zshrc`
-* `ln -s ~/config/zsh/fzf/.fzf .fzf`
-* `ln -s ~/config/zsh/fzf/.fzf.zsh .fzf.zsh`
+* `$(brew --prefix)/opt/fzf/install`
 
 ## neovim
 * symlink config: `mkdir -p ~/.config/nvim && ln -s ~/config/neovim/vimrc ~/.config/nvim/init.vim`
