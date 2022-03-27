@@ -7,8 +7,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
 Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'albfan/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
 Plug 'junegunn/fzf.vim'
@@ -109,10 +108,11 @@ nnoremap <leader>f :NERDTreeFind<CR>
 
 " gitgutter
 autocmd BufWritePost * GitGutter  " update on save
+highlight clear SignColumn
 
 " lightline
 let g:lightline = {
-    \ 'colorscheme': 'wombat', 
+    \ 'colorscheme': 'wombat',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
     \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
