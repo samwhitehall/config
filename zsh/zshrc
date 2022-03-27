@@ -48,11 +48,6 @@ alias sz="source ~/.zshrc"
 alias dt="python -c 'from datetime import datetime; print(datetime.utcnow().isoformat())'"
 
 
-# EDITED
-source ~/apps/docs/scripts/termtools/init.sh
-source ~/config/zsh/edited-aliases
-
-
 # Load zsh-autosuggestions plugin
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -60,10 +55,6 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'
 
-
-# Add custom script for mapping custom pyenvs to directories
-source ~/config/zsh/pyenv_manager
-setpyenv
 
 # Global search and replace alias
 function agr() {
