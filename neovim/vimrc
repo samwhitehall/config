@@ -8,6 +8,7 @@ Plug 'tpope/vim-repeat'
 
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'jistr/vim-nerdtree-tabs'
 
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
 Plug 'junegunn/fzf.vim'
@@ -20,6 +21,9 @@ Plug 'iberianpig/tig-explorer.vim'
 Plug 'rbgrouleff/bclose.vim'   " dependency of tig-explorer
 
 Plug 'neomake/neomake'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+
 
 call plug#end()
 
@@ -138,4 +142,7 @@ call neomake#configure#automake('nrwi', 500)
 let g:neomake_python_enabled_makers = ['flake8']
 
 let g:neomake_python_flake8_exe = 'env'
-let g:neomake_python_flake8_args = ['PYENV_VERSION=lint', 'flake8']
+let g:neomake_python_flake8_args = ['flake8']
+
+" markdown preview
+nmap <C-p> <Plug>MarkdownPreviewToggle
