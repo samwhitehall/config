@@ -1,5 +1,5 @@
 # Setup & configure oh-my-zsh
-export ZSH="/Users/samw/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # custom theme
 ZSH_THEME="typewritten-sw"
@@ -11,14 +11,9 @@ ZSH_CUSTOM="$HOME/config/zsh/custom"
 DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(emoji git vi-mode vi-mode-cursor)
+plugins=(emoji git vi-mode vi-mode-cursor zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-
-
-# Enable pyenv shims & autocompletion
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 
 # Load nvm (only when called, to save boot time)
@@ -28,6 +23,12 @@ function nvm() {
   [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
   echo "nvm has been initialised! try again now!"
 }
+
+# Python
+eval "$(pyenv init -)"
+
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+source /Users/sam.whitehall/.pyenv/versions/3.6.15/bin/virtualenvwrapper.sh
 
 # Flags for `less`
 export LESS="IRS"
@@ -42,14 +43,10 @@ alias vim=nvim
 
 alias mdkir=mkdir
 
-alias sandbox="cd ~/sandbox && pyenv shell sandbox && ipython"
-
 alias sz="source ~/.zshrc"
 alias dt="python -c 'from datetime import datetime; print(datetime.utcnow().isoformat())'"
 
-
-# Load zsh-autosuggestions plugin
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+alias sandbox="cd ~/sandbox && pipenv run ipython"
 
 # Load fzf (fuzzy-finder)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -60,3 +57,11 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 function agr() {
     ag -l "$1" | xargs sed -i '' -e "s/$1/$2/g"
 }
+export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
+
+# Krakenflex
+alias upside-login-development='eval $(upside-auth-login development)'
+alias upside-login-prod
+
+export PATH="$PATH:/Users/sam.whitehall/apps/ves/development/scripts/bin"
+
