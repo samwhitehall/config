@@ -1,12 +1,13 @@
 [user]
 	name = Sam Whitehall
-	email = sam.w@edited.com
+	email = sam.whitehall@krakenflex.com
 [color]
 	ui = true
 [core]
 	editor = vi
 	pager = less -F -X
     excludesfile = ~/config/git/ignore
+	hooksPath = /Users/sam.whitehall/.git-hooks
 [alias]
 	co = checkout
 	br = branch
@@ -17,6 +18,8 @@
 	email = me@samwhitehall.com
 [push]
 	default = current
+[pull]
+	rebase = true
 [merge]
 	conflictstyle = diff3
 [filter "lfs"]
