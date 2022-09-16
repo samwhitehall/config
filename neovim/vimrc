@@ -6,6 +6,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 
+Plug 'Yggdroot/indentLine'
+
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
@@ -124,6 +126,9 @@ let g:lightline = {
     \   'gitbranch': 'FugitiveHead'
     \ },
     \ }
+
+" indentline
+let g:indentLine_char = '⦙'
 
 " fzf
 nnoremap <silent> <leader>. :Files<CR>
