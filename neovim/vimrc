@@ -145,3 +145,6 @@ let g:neomake_python_flake8_args = ['flake8']
 
 " markdown preview
 nmap <C-p> <Plug>MarkdownPreviewToggle
+
+" snippets
+inoremap <C-b> import pdb; pdb.set_trace()
