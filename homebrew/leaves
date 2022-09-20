@@ -16,6 +16,7 @@ tree
 wget
 xz
 yarn
+yamllint
 zlib
 zsh
 zsh-autosuggestions
