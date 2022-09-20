@@ -63,5 +63,7 @@ export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 alias upside-login-development='eval $(upside-auth-login development)'
 alias upside-login-prod
 
+alias fixup='git commit -m "fixup w/last (dont merge)" --no-verify'
+
 export PATH="$PATH:/Users/sam.whitehall/apps/ves/development/scripts/bin"
 
