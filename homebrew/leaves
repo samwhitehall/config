@@ -8,6 +8,7 @@ node
 pipenv
 pyenv
 pyenv-virtualenv
+ripgrep
 rust
 sqlite
 the_silver_searcher
