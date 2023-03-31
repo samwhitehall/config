@@ -64,6 +64,7 @@ alias upside-login-development='eval $(upside-auth-login development)'
 alias upside-login-prod
 
 alias fixup='git commit -m "fixup w/last (dont merge)" --no-verify'
+alias gitclean='git br -D $(git br | grep -v "master")'
 
 export PATH="$PATH:/Users/sam.whitehall/apps/ves/development/scripts/bin"
 
