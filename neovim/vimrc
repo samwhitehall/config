@@ -36,6 +36,7 @@ call plug#end()
 syntax on
 syntax enable
 filetype plugin indent on
+let g:vim_json_conceal=0
 
 " colour
 highlight LineNr ctermfg=DarkGray
