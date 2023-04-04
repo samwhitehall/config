@@ -27,6 +27,7 @@ Plug 'neomake/neomake'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 Plug 'pedrohdz/vim-yaml-folds'
+Plug 'hashivim/vim-terraform'
 
 
 call plug#end()
